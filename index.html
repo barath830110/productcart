@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section class="food">
+    <div class="menu">
+      <h1 class="head">Desserts</h1>
+    <div class="menu1">
+      <div  class="wal">
+        <img src="assets/images/image-waffle-desktop.jpg" alt="" class="firstimg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="" class="carry">
+          <a href="" class="add">Add to cart</a>
+                <!---quantaty  declaration-->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre()"><div id="size" class="size"></div><img src="assets/images/icon-increment-quantity.svg" alt="" class="in" id="in" onclick="incre()">
+        </div>
+        <a href="" class="product1">Waffle</a><br>
+        <b>Waffle with Berries</b>
+        <p>$6.50</p>
+      </div>
+      <div class="creme">
+        <img src="assets/images/image-creme-brulee-desktop.jpg" alt="" class="secondimg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <a href="" class="add">Add to cart</a>
+      <!---quantaty  declaration-->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre1()">
+          <div  id="size1" class="size"></div>
+          <img src="assets/images/icon-increment-quantity.svg" alt="" class="in" onclick="incre1()">
+        </div>
+        <a href="" class="product2">Creme Brulee</a><br>
+        <b>Vanilla Bean Creme Brulee</b>
+        <p>$7.00</p>
+      </div>
+      <div class="macaron">
+        <img src="assets/images/image-macaron-desktop.jpg" alt="" class="thirdimg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <a href="" class="add">Add to cart</a>
+          <!---Quantaty declaration--->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre2()">
+          <div  id="size2" class="size"></div>
+          <img src="assets/images/icon-increment-quantity.svg" alt="" class="in" onclick="incre2()">
+        </div>
+        <a href="" class="product3">Macaron</a><br>
+        <b>Macaron Mix of Five</b>
+        <p>$8.00</p>
+      </div>
+    </div>
+    <div class="menu1">
+      <div class="tiramisu">
+        <img src="assets/images/image-tiramisu-desktop.jpg" alt="" class="fourimg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <a href="" class="add">Add to cart</a>
+          <!--Quantaty declaration-->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre3()">
+          <div id="size3" class="size"></div>
+          <img src="assets/images/icon-increment-quantity.svg" alt="" class="in" onclick="incre3()">
+        </div>
+        <a href="" class="product4">Tiramisu</a><br>
+        <b>Classic Tiramisu</b>
+        <p>$5.50</p>
+      </div>
+      <div class="baklava">
+        <img src="assets/images/image-baklava-desktop.jpg" alt="" class="fiveimg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <a href="" class="add">Add to cart</a>
+          <!--Quantaty Declaration-->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre4()">
+          <div id="size4" class="size"></div>
+          <img src="assets/images/icon-increment-quantity.svg" alt="" class="in" onclick="incre4()">
+        </div>
+        <a href="" class="product5">Baklava</a><br>
+        <b>Pistachio Baklava</b>
+        <p>$4.00</p>
+      </div>
+      <div class="lemon">
+        <img src="assets/images/image-meringue-desktop.jpg" alt="" class="siximg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <a href="" class="add">Add to cart</a>
+          <!---Quantaty Declaration-->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre5()">
+          <span id="size5" class="size"></span>
+          <img src="assets/images/icon-increment-quantity.svg" alt="" class="in" onclick="incre5()">
+        </div>
+        <a href="" class="product6">Pie</a><br>
+        <b>Lemon Meringue Pie</b>
+        <p>$5.00</p>
+      </div>
+    </div>
+    <div class="menu1">
+      <div class="cake">
+        <img src="assets/images/image-cake-desktop.jpg" alt="" class="sevenimg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <a href="" class="add">Add to cart</a>
+          <!--Quantaty Declaration-->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre6()">
+          <span class="size" id="size6"></span>
+          <img src="assets/images/icon-increment-quantity.svg" alt="" class="in" onclick="incre6()">
+        </div>
+        <a href="" class="product7">Cake</a><br>
+        <b>Red Velvet Cake</b>
+        <p>$4.50</p>
+      </div>
+      <div class="brownie">
+        <img src="assets/images/image-brownie-desktop.jpg" alt="" class="eightimg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <a href="" class="add">Add to cart</a>
+          <!--Quantaty Declaration-->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre7()">
+          <span class="size" id="size7"></span>
+          <img src="assets/images/icon-increment-quantity.svg" alt="" class="in" onclick="incre7()">
+        </div>
+        <a href="" class="product8">Brownie</a><br>
+        <b>Salted Carames Brownie</b>
+        <p>$5.50</p>
+      </div>
+      <div class="cotta">
+        <img src="assets/images/image-panna-cotta-desktop.jpg" alt="" class="nineimg">
+        <div class="pur">
+          <img src="assets/images/icon-add-to-cart.svg" alt="">
+          <a href="" class="add">Add to cart</a>
+          <!--Quantaty Declaration-->
+          <img src="assets/images/icon-decrement-quantity.svg" alt="" class="dec" onclick="decre8()">
+          <span class="size" id="size8"></span>
+          <img src="assets/images/icon-increment-quantity.svg" alt="" class="in" onclick="incre8()">
+        </div>
+        <a href="" class="product9">Panna Cotta</a><br>
+        <b>Vanilla Panna Cotta</b>
+        <p>$6.50</p>
+      </div>
+    </div>
+    </div>
+    <div class="cart">
+      <h1>Your cart</h1>
+      <div id="waffle">
+        <b>Waffle with Berries</b><br>
+        <div class="com">
+          <p id="quan"></p>
+          <span>@6.50</span>
+          <span id="add"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove">        
+        </div>
+      </div>
+      <div id="creme">
+        <b>Vanilla Bean Creme Brulee</b><br>
+        <div class="com">
+          <p id="quan1"></p>
+          <span>@7.00</span>
+          <span id="add1"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove1">        
+        </div>
+      </div>
+      <div id="macaron">
+        <b>Macaron Mix of Five</b><br>
+        <div class="com">
+          <p id="quan2"></p>
+          <span>@8.00</span>
+          <span id="add2"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove2">        
+        </div>
+      </div>
+      <div>
+      <div id="tiramisu">
+        <b>Classic Tiramisu</b><br>
+        <div class="com">
+          <p id="quan3"></p>
+          <span>@5.50</span>
+          <span id="add3"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove3">        
+        </div>
+      </div>
+      <div id="baklava">
+        <b>Pistachio Baklava</b><br>
+        <div class="com">
+          <p id="quan4"></p>
+          <span>@4.00</span>
+          <span id="add4"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove4">        
+        </div>
+      </div>
+      <div id="pie">
+        <b>Lemon Meringue Pie</b><br>
+        <div class="com">
+          <p id="quan5"></p>
+          <span>@5.00</span>
+          <span id="add5"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove5">        
+        </div>
+      </div>
+      <div id="cake">
+        <b>Red Velvet Cake</b><br>
+        <div class="com">
+          <p id="quan6"></p>
+          <span>@4.50</span>
+          <span id="add6"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove6">        
+        </div>
+      </div>
+      <div id="brownie">
+        <b>Salted Carames Brownie</b><br>
+        <div class="com">
+          <p id="quan7"></p>
+          <span>@5.50</span>
+          <span id="add7"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove7">        
+        </div>
+      </div>
+      <div id="cotta">
+        <b>Vanilla Panna Cotta</b><br>
+        <div class="com">
+          <p id="quan8"></p>
+          <span>@6.50</span>
+          <span id="add8"></span>
+          <img src="assets/images/icon-remove-item.svg" alt=""id="remove8">        
+        </div>
+      </div>
+      <div class="placeorder">
+        <span>Order Total</span>
+        <span id="sum" class="sum"></span>
+        <div>
+          <img src="assets/images/icon-carbon-neutral.svg" alt="">
+          <a href="">This is a <b>carbon-neutral</b> delivery</a>
+        </div>
+        <button onclick="placeorder()">Confirm Order</button>
+      </div>
+    </div>
+  </section>  
+<script src="action.js"></script>
+</body>
+</html>
