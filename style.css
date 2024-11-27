@@ -548,7 +548,7 @@ left: 50px;
     padding: 20px;
 }
 }
-@media screen and (min-width:362px) and (max-width:600px){
+@media screen and (min-width:361px) and (max-width:600px){
     .food{
         display: block;
     }
