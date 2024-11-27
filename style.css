@@ -547,8 +547,29 @@ left: 50px;
     background-color: brown;
     padding: 20px;
 }
-};
-
+}
+@media screen and (min-width:362px) and (max-width:480px){
+    .food{
+        display: block;
+    }
+    .cart{
+        width: 270px;
+        position: relative;
+        right: -185px;
+        top: 380px;
+        border-radius: 10px;
+        background-color: #f5f5dc;
+    }    
+    .placeorder button{
+        width: 250px;
+        position: relative;
+        top: 30px;
+        left: 10px;
+        border-radius: 20px;
+        background-color: brown;
+        padding: 20px;
+}
+}
 
 
 
