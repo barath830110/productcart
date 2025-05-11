@@ -40,6 +40,7 @@ function quataty(count){
 removeproduct1.addEventListener("click",() =>{
    waffle.style.display ='none';
    waffleprice=0;
+   countelement.textContent=0;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
    });  
         // Prodcut2 declaration //
@@ -73,6 +74,7 @@ const removecreme=document.getElementById("remove1");
 removecreme.addEventListener("click",() =>{
    creme.style.display ='none';
    cremeprice=0;
+   sizeofcreme.textContent=0;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 });
 
@@ -108,6 +110,7 @@ const removemacaron=document.getElementById("remove2");
 removemacaron.addEventListener("click",() =>{
    macaron.style.display ='none';
    macaronprice=0;
+   sizeofmacaron.textContent=0;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 });
      //Product4 declaration//
@@ -133,7 +136,7 @@ function decre3(){
 function quataty3(count1){
    const tiramisuquantaty=document.getElementById("quan3");
    tiramisuquantaty.textContent=count1+"x";
-   tiramisuprice=count1*8.00;
+   tiramisuprice=count1*5.50;
    const add3=document.getElementById("add3");
    add3.textContent="$"+tiramisuprice;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
@@ -142,6 +145,7 @@ const removetiramisu=document.getElementById("remove3");
 removetiramisu.addEventListener("click",() =>{
    tiramisu.style.display ='none';
    tiramisuprice=0;
+   sizeoftiramisu.textContent=0;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 });
 
@@ -177,6 +181,7 @@ const removebaklava=document.getElementById("remove4");
 removebaklava.addEventListener("click",() =>{
    baklava.style.display ='none';
    baklavaprice=0;
+   baklava.textContent=0;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 });
  //product 6 declaration//     
@@ -210,6 +215,7 @@ const removepie=document.getElementById("remove5");
 removepie.addEventListener("click",() =>{
    pie.style.display ='none';
    pieprice=0;
+   sizeofpie.textContent=0;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 });
      //Product 7 Declaration//
@@ -243,6 +249,7 @@ const removecake=document.getElementById("remove6");
 removecake.addEventListener("click",() =>{
    cake.style.display ='none';
    cakeprice=0;
+   sizeofcake.textContent=0;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 });
     //Product 8 Declaration//
@@ -276,6 +283,7 @@ const removebrownie=document.getElementById("remove7");
 removebrownie.addEventListener("click",() =>{
    brownie.style.display ='none';
    brownieprice=0;
+   sizeofbrownie.textContent=0;
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 });
 //Product 9 Declaration//
@@ -307,13 +315,19 @@ function quataty8(count1){
    add8.textContent="$"+cottaprice;
    removecotta.addEventListener("click",() =>{
       cotta.style.display ='none';
+      sizeofcotta.textContent=0;
       cottaprice=0;
       total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 });
    total(waffleprice+cremeprice+macaronprice+tiramisuprice+baklavaprice+pieprice+cakeprice+brownieprice+cottaprice);
 }
 function total(...Total){
-sum.textContent=Total;
+   sum.textContent=Total;
+   if(Total==0){
+      sum.style.display='none';
+   }else{
+      sum.style.display='inline';
+   }
 }
 function placeorder(){
    alert('Order confirmed');
